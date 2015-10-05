@@ -32,6 +32,7 @@ Protected Module About
 		Vidal van Bergen (VVB)
 		Jeff Fowler (JF)
 		Kenichi Maehashi (KM)
+		Jeremy Cowgar (JC)
 	#tag EndNote
 
 	#tag Note, Name = Documentation
@@ -63,6 +64,34 @@ Protected Module About
 		for previous release notes. Contributors are identified by initials. See the "Contributors" note for full names.
 		
 		When you make changes, add new notes above existing ones, and remember to increment the Version constant.
+		
+		189: 2015-09-11 by VVB
+		- Fixed a bug in SmoothResize that could throw up an error message on windows.
+		- Fixed a bug that threw up an error message if people used the 'CocoaMenuItem' on windows.
+		- Fixed a missing window file that apparantly got renamed to using the '.xojo_window' extension.
+		
+		188: 2015-07-05 by VVB
+		- Added NSVisualEffectView class
+		- Added a SetVisualEffectView window extension, and an example to NSWindowExample.
+		
+		187: 2015-08-09 by TT
+		- Improves XMLDictionary (part of TTsSmartPreferences) to accept arrays of various common types instead of only arrays of Variants.
+		- Makes IOKit compile with REAL Studio again
+		- Fixes CFString constructor to fall back to a safe encoding when the string's encoding is not set.
+		- Renames KeychainServices.UserInteractionAllowed into IsUserInteractionAllowed to make it compile with Xojo 2015r2
+		
+		186: 2015-06-21 by JC
+		- Added IoKit.IdleTime which returns the user idle time in nano seconds
+		- Added IoKit.IdleTime example, Examples/IOKitIdleTimeExampleWindow
+		
+		185: 2015-05-17 by CY
+		- Remove a smart quote that slipped into v. 184.
+		- Add property NSTokenField.Bordered.
+		- Update .gitignore for Xojo.
+		
+		184: 2015-05-12 by TT (Thanks to jda@his.com for pointing out both of these bugs)
+		- Fixes all DataWithPDFInsideRect() and DataWithEPSInsideRect() functions - they did not return a value before.
+		- Fixes Cocoa.NSValue.PtrValue. Didn't work at all before.
 		
 		183: 2015-02-26 by KM
 		- Changed Cocoa.NSClassFromString from External Method to Shared Method to improve cross-platform compatibility.
@@ -572,7 +601,7 @@ Protected Module About
 	#tag EndNote
 
 
-	#tag Constant, Name = Version, Type = Double, Dynamic = False, Default = \"183", Scope = Protected
+	#tag Constant, Name = Version, Type = Double, Dynamic = False, Default = \"187", Scope = Protected
 	#tag EndConstant
 
 
@@ -581,7 +610,7 @@ Protected Module About
 			Name="Index"
 			Visible=true
 			Group="ID"
-			InitialValue="2147483648"
+			InitialValue="-2147483648"
 			InheritedFrom="Object"
 		#tag EndViewProperty
 		#tag ViewProperty
